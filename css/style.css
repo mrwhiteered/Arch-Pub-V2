@@ -1,0 +1,506 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* container */
+
+
+
+.container {
+    width: min(100% - 2rem, 1920px);
+    margin: 0 auto;
+    margin-top: 10px;
+    z-index: 3;
+    
+}
+
+.logo {
+    width: 130px;
+    margin: 0 auto;
+    
+}
+.container__logo{
+    margin: 0 auto;
+    width: min(100% - 2rem, 1920px);
+    position: relative;
+}
+.logo_link{
+    text-decoration: none;
+}
+.containerLogo__text{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.logoTitle {
+    
+    font-family: 'Vollkorn SC';
+font-style: normal;
+color: #000000;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+display: flex;
+align-items: center;
+text-align: center;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.logo_text{
+    font-family: 'Vollkorn SC';
+font-style: normal;
+font-weight: 400;
+font-size: 7px;
+line-height: 10px;
+
+align-items: center;
+text-align: center;
+text-transform: lowercase;
+
+color: #000000;
+}
+/* Эта хуйня помогает останавливать прокрутку хэдера */
+.nav{
+    position:-webkit-sticky; 
+    position:sticky;
+    z-index: 3;
+     top:0;}
+
+.container__navigation {
+    
+    display: flex;
+    justify-content: space-around;
+    
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: sticky;
+   top:0;
+   z-index: 3;
+}
+
+
+.filter {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+    z-index: 2;
+}
+
+.filter__logo {
+    
+    margin: 5px;
+    margin-right: 20px;
+}
+
+
+
+.filter__titile {
+    text-align: center;
+    margin: auto 0;
+    font-size: 16px;
+    line-height: 12px;
+    text-transform: uppercase;
+    display: block;
+
+    font-family: 'Vollkorn SC';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 35px;
+}
+
+.search {
+    margin: 0 auto;
+}
+
+.search__input {
+    border: 1px solid #000000;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    width: 275px;
+
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+
+display: flex;
+align-items: center;
+text-align: center;
+
+}
+.search__container{
+    position: relative;
+}
+.searchLogo{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.btn__menu {
+    display: flex;
+    margin-right: 0;
+   
+    align-self: flex-end;
+}
+
+.menu__title {
+    text-align: center;
+    margin: auto 0;
+    font-size: 16px;
+    line-height: 12px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-left: auto;
+
+    font-family: 'Vollkorn SC';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 35px;
+}
+
+.menu__logo {
+    width: 47px;
+    margin: 5px;
+    margin-right: 0;
+    
+}
+
+.btn__filter {
+    background: transparent;
+    border: none;
+}
+
+
+
+/* фильтр выпадающий */
+.filter__list {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    display: none;
+    z-index: 999;
+    background: #00000033;
+    z-index: 2;
+   
+
+}
+
+.filter__item {
+    list-style-image: url('/image/list-style-img.png');
+    padding:0 10px;
+    z-index: 2;
+    text-align: left;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 35px;
+
+}
+
+.activFilter {
+    display: block;
+    font-size: 10px;
+    width: 100%;
+    font-weight: 700;
+}
+.activMenu{
+    display: block;
+    font-size: 10px;
+   
+    font-weight: 700;
+}
+
+
+.enableTitle {
+    color: transparent;
+}
+.openbtn{
+    width: 315px;
+}
+
+/* ----------------------- */
+.container__navigation{
+    
+    background-color: aliceblue;
+    z-index: 3;
+    
+   
+}
+
+.toBottom{
+    overflow: hidden;
+   z-index: 1;
+   
+}
+.toBottom img{
+    transition: 1s; /* Время эффекта */
+    
+   z-index: 1;
+    
+}
+.toBottom img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   z-index: -2;
+   overflow: hidden;
+   overflow-wrap: break-word;
+  
+   }
+   .arhivImage{
+    
+   }
+
+/* Фильтр */
+.filterItem{
+    padding: 10px;
+    
+    margin: 20px; 
+    height: 100%;
+    width: 200px; 
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: none;
+    margin-top: auto;
+    margin-bottom: 0;
+    
+  }
+  .show{
+    display: block;
+  }
+  .containerFilter{
+    display: flex;
+    flex-wrap: wrap;
+    
+    text-align: left;
+    width: min(100% - 2rem, 1900px);
+    margin:0 auto;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+
+
+  /*смена цвета фильтра activn фильтр */
+  .activn{
+    background: green;
+    list-style:georgian;
+    
+  }
+  /* --------------------------- */
+
+
+  .dateCreater{
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 10px;
+
+color: rgba(0, 0, 0, 0.5);
+padding: 5px;
+    
+  }
+  .toBottom{
+  margin-top: 20px;
+  }
+  .correctTextDes{
+    text-align: left;
+ 
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+
+  }
+  
+
+.wrap{
+    border-bottom: 1px solid black;
+    height: 1px;
+}
+  .footer{
+    
+    position:-webkit-sticky; 
+    position:sticky;
+     bottom: 0;
+ background-color: white;
+      
+    
+  }
+  .btn__publication{
+    margin-top: 13px;
+    background: transparent;
+    border: 1px solid #000000;
+border-radius: 30px;
+margin-bottom: 13px;
+z-index: 30;
+
+
+
+
+  }
+  .container__footer{
+  display: flex;
+  justify-content: center;
+ 
+  max-width: 300px;
+  margin: 0 auto;
+  
+  
+  }
+  /* menu */
+  .memu__list{
+  
+position: absolute;
+    right: 70px;
+   
+    display: none;
+    z-index: 1;
+    background: #00000033;
+width: 315px;
+
+
+
+  }
+  .menu__item{
+    list-style: none;
+    text-align: right;
+    padding:0 10px;
+    z-index: 2;
+    width: 100%;
+    color: #000000;
+   
+    
+    
+  }
+  .menu__link{
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 35px;
+    
+  }
+  .btn__menu{
+    background: none;
+    border: none;
+  }
+  .activMenu{
+    display: block;
+    font-size: 10px;
+   
+    font-weight: 700;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999; /* set a high z-index to ensure it's on top of other content */
+  }
+  .disable-pointer-events {
+    pointer-events: none;
+  }
+  .toBottom img:hover,
+.toBottom img.disable-hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+
+

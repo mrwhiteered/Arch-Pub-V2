@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;500&display=swap');
+
+.container__body{
+    width: min(100% - 2rem, 1920px);
+    margin: 0 auto;
+}
+body {
+    background: rgb(255, 255, 255);
+   
+    cursor: default;
+}
+
+.video {
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin: auto;
+  position: relative;
+ object-fit: none;
+  z-index: 1;
+  transition: all 1.5s ease-in-out;
+}
+
+.video-wrapper {
+  transition: all 1.5s ease-in-out;
+  width: 30%;
+  height: 30%;
+  display: block;
+  margin: 0 auto;
+  position: sticky;
+  z-index: 1;
+}
+.textLogo{
+    margin: 0 auto;
+    max-width: 300px;
+    z-index: 1;
+    display: none;
+    text-align: center;
+}
+.linkTomain{
+    text-decoration: none;
+}
