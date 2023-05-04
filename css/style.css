@@ -149,6 +149,7 @@ color: #000000;
 .container__navigation {
     
     display: flex;
+   align-items: center;
     justify-content: space-around;
     
     padding-bottom: 10px;
@@ -501,6 +502,9 @@ line-height: 35px;
     transform: scale(1.2);
     z-index: 1;
 }
+
+
+/* фокус на фильтр меню  */
 
 
 
