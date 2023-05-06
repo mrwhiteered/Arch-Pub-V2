@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Vollkorn+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/stats.css">
 </head>
 
 <body>
@@ -76,21 +77,108 @@
                     <img src="image/menuSvg.svg" alt="menu" class="menu__logo">
                 </button>
             </div>
+           
             </div>
+            <ul class="disertation">
+                <li onclick="addLine()" id="item__diser" class="item__dis">Диссертации
+                    <img id="diser" src="image/underline.svg" alt="" class="">
+                </li>
+                <li onclick="addLine2()" id="item__stat"  class="item__dis">Статьи
+                    <img id="stat" src="image/underline.svg" alt="" class="under">
+                </li>
+               </ul>
         </div>
         <!-- Контэйнер -->
-        
-        <div class="container">
+       
+       <!-- диссертации -->
+        <div id="diserContainer" class="container ">
         <div class="containerFilter" id="containerForFilter">
 
         </div> 
     </div>
+<!-- ------ -->
+
+<div id="containerStats" class="container__stats">
+    <ul id="listStats" class="list__stats showStats">
+        <li class="item__stats">
+            <div class="left__stats">
+            <img src="image/stats.png" alt="" class="stats__img">
+            <h3 class="text__stats">Адаптивное многофункциональное пространство как знаковый объект городских периферийных территорий.</h3>
+        </div>
+            <div class="right__stats">
+                <h4 class="name__stats">Чумаченко Евгения Геннадьевна</h4>
+                <p class="date__stats">март 2023</p>
+            </div>
+        </li>
+        <li class="item__stats">
+            <div class="left__stats">
+            <img src="image/stats.png" alt="" class="stats__img">
+            <h3 class="text__stats">Адаптивное многофункциональное пространство как знаковый объект городских периферийных территорий.</h3>
+        </div>
+            <div class="right__stats">
+                <h4 class="name__stats">Чумаченко Евгения Геннадьевна</h4>
+                <p class="date__stats">март 2023</p>
+            </div>
+        </li>
+        <li class="item__stats">
+            <div class="left__stats">
+            <img src="image/stats.png" alt="" class="stats__img">
+            <h3 class="text__stats">Адаптивное многофункциональное пространство как знаковый объект городских периферийных территорий.</h3>
+        </div>
+            <div class="right__stats">
+                <h4 class="name__stats">Чумаченко Евгения Геннадьевна</h4>
+                <p class="date__stats">март 2023</p>
+            </div>
+        </li>
+        <li class="item__stats">
+            <div class="left__stats">
+            <img src="image/stats.png" alt="" class="stats__img">
+            <h3 class="text__stats">Адаптивное многофункциональное пространство как знаковый объект городских периферийных территорий.</h3>
+        </div>
+            <div class="right__stats">
+                <h4 class="name__stats">Чумаченко Евгения Геннадьевна</h4>
+                <p class="date__stats">март 2023</p>
+            </div>
+        </li>
+        <li class="item__stats">
+            <div class="left__stats">
+            <img src="image/stats.png" alt="" class="stats__img">
+            <h3 class="text__stats">Адаптивное многофункциональное пространство как знаковый объект городских периферийных территорий.</h3>
+        </div>
+            <div class="right__stats">
+                <h4 class="name__stats">Чумаченко Евгения Геннадьевна</h4>
+                <p class="date__stats">март 2023</p>
+            </div>
+        </li>
+        <li class="item__stats">
+            <div class="left__stats">
+            <img src="image/stats.png" alt="" class="stats__img">
+            <h3 class="text__stats">Адаптивное многофункциональное пространство как знаковый объект городских периферийных территорий.</h3>
+        </div>
+            <div class="right__stats">
+                <h4 class="name__stats">Чумаченко Евгения Геннадьевна</h4>
+                <p class="date__stats">март 2023</p>
+            </div>
+        </li>
+
+        <li class="item__stats">
+            <div class="left__stats">
+            <img src="image/stats.png" alt="" class="stats__img">
+            <h3 class="text__stats">Адаптивное многофункциональное пространство как знаковый объект городских периферийных территорий.</h3>
+        </div>
+            <div class="right__stats">
+                <h4 class="name__stats">Чумаченко Евгения Геннадьевна</h4>
+                <p class="date__stats">март 2023</p>
+            </div>
+        </li>
+    </ul>
+</div>
     </main>
     <div class="wrap"></div>
     <footer class="footer">
         
         <div class="container__footer">
-        <button id="openSecondPage" class="btn__publication">Я хочу пиццы</button>
+        <button id="openSecondPage" class="btn__publication">хочу публиковаться</button>
     </div>
     <div id="preload-animation">
         <!-- Preload animation here --> 
@@ -100,6 +188,7 @@
     <script src="JS/main.js"></script>
     <script src="JS/Filter.js"></script>
     <script src="JS/Arhiv.js"></script>
+    <script src="JS/disertation.js"></script>
     <script src="JS/openFilterMenu.js"></script>
     <!-- <script src="JS/openMaket.js" type="text/javascript"></script> -->
     <script src="JS/openMaket2.js" type="text/javascript"></script>

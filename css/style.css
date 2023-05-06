@@ -309,7 +309,7 @@ line-height: 35px;
 /* ----------------------- */
 .container__navigation{
     
-    background-color: aliceblue;
+    background: white;
     z-index: 3;
     
    
@@ -505,6 +505,36 @@ line-height: 35px;
 
 
 /* фокус на фильтр меню  */
+.disertation{
+    display: flex;
+    justify-content: center;
+    background: white;
+    z-index: 3;
+}
+.item__dis{
+    font-family: 'Vollkorn SC';
+font-style: normal;
+font-weight: 400;
+width: 200px;
+font-size: 11px;
+line-height: 35px;
+/* or 318% */
+padding: 0 50px;
 
+align-items: center;
+text-align: center;
+text-transform: uppercase;
+color: #000000;
+cursor: pointer;
+user-select: none;
+}
 
-
+.under{
+    display: none;
+}
+.activ__line{
+    display:block;
+}
+.item__dis img{
+    width: 100%;
+}
