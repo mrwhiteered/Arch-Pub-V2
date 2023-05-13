@@ -1,26 +1,30 @@
 var urlParams = new URLSearchParams(window.location.search);
-var id = urlParams.get('id');
+var id = urlParams.get("id");
 console.log(id);
 // add the ID to the text element
 var textElement = document.getElementById("myText");
 
-if (id!=null){
-async function getData() {
-    let url = 'JS/stor.json'; // храним url 
-    let response = await fetch(url); // запрос к файлу 
-    let data = await response.json(); // декодируем формат json в объект 
+if (id != null) {
+  async function getData() {
+    let url = "JS/stor.json"; // храним url
+    let response = await fetch(url); // запрос к файлу
+    let data = await response.json(); // декодируем формат json в объект
     let dataArr = Object.values(data); // объект в массив (Object.values - возвращает массив, чьи элементы это значения перечисляемых свойств найденных в объекте )
-     console.log("Array: ", dataArr);
-  
-    var textElement = document.getElementById("myText");// id контейнера куда все будет помещать
-          
+    console.log("Array: ", dataArr);
+
     let idelement = dataArr[id];
-    
-                      const newItem = document.createElement('div'); // создаем новый элемент newItem 
-            // меняем содержимое элмента newItem (дописываем туда все нужные теги классы и успеваем вставлять значения )
-            // обратные кавычки для возможности вписывания JS кода 
-            // ${} - для добавления JS (внутри обращаюсь  к нужным элементам массива)
-                      newItem.innerHTML = ` 
+
+    //   получаем объект для галлереи и превращаем его в массив
+    let objGalery = data[id]["galery"];
+    let galleryArray = Object.values(objGalery);
+
+    console.log(galleryArray[3]);
+
+    const newItem = document.createElement("div"); // создаем новый элемент newItem
+    // меняем содержимое элмента newItem (дописываем туда все нужные теги классы и успеваем вставлять значения )
+    // обратные кавычки для возможности вписывания JS кода
+    // ${} - для добавления JS (внутри обращаюсь  к нужным элементам массива)
+    newItem.innerHTML = ` 
             <div>
                     <div class="diseTopPart">
                         <h2 class="titleDiser">${idelement.name} </h2>
@@ -77,12 +81,7 @@ async function getData() {
                            </div>
                            <div class="slider">
                                <div class="slider-container">
-                                 <img class="slideImg" src="${idelement.imgGal1}" alt="Image 1">
-                                  <img class="slideImg" src="${idelement.imgGal2}" alt="Image 2">
-                                  <img class="slideImg" src="${idelement.imgGal3}" alt="Image 3">
-                                 <img class="slideImg" src="${idelement.imgGal4}" alt="Image 1">
-                                 <img class="slideImg" src="${idelement.imgGal5}" alt="Image 2">
-                                 <img class="slideImg" src="${idelement.imgGal6}" alt="Image 3">
+                               
                               </div>
                            </div>
                            <div class="slider-nav">
@@ -97,46 +96,57 @@ async function getData() {
             </div>
                       `;
 
-            // Не забываем newItem тоже добавить пару классов 
-                    newItem.classList.add("diserContainer");
-                    newItem.classList.add(idelement.category);
-                    newItem.classList.add("show");
+    // Не забываем newItem тоже добавить пару классов
+    newItem.classList.add("diserContainer");
+    newItem.classList.add(idelement.category);
+    newItem.classList.add("show");
 
-                  // Ну и в итоге вставляем это все в контейнер 
-                  textElement.appendChild(newItem);         
-        }
-        getData();
+    // Ну и в итоге вставляем это все в контейнер
+    textElement.appendChild(newItem);
 
+    var sliderContainer = document.querySelector('.slider-container');
 
-}
-
-// слайдер НЕ РАБОТАЕТ 
-const slider = document.querySelector('.slider');
-const sliderContainer = document.querySelector('.slider-container');
-const slides = document.querySelectorAll('img');
-const prevButton = document.querySelector('.slider-prev');
-const nextButton = document.querySelector('.slider-next');
-let slideIndex = 0;
-
-function showSlide() {
-   const sliderContainer = document.querySelector('.slider-container');
-  sliderContainer.style.transform = `translateX(-${slideIndex * slides[0].offsetWidth}px)`;
-}
-
-function showPrevSlide() {
-  slideIndex--;
-  if (slideIndex < 0) {
-    slideIndex = slides.length - 1;
+// Создаем элементы <img> на основе массива imgArray
+for (var i = 0; i < galleryArray.length; i++) {
+  var galElement = document.createElement("img");
+  galElement.src = galleryArray[i];
+  galElement.alt = "Image " + (i+1);
+  galElement.classList.add("slideImg");
+  sliderContainer.appendChild(galElement);
+};
   }
-  showSlide();
-}
-
-function showNextSlide() {
-  slideIndex++;
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  }
-  showSlide();
-}
+  getData();
+};
 
 
+
+// // слайдер НЕ РАБОТАЕТ
+// const slider = document.querySelector(".slider");
+// const sliderContainer = document.querySelector(".slider-container");
+// const slides = document.querySelectorAll("img");
+// const prevButton = document.querySelector(".slider-prev");
+// const nextButton = document.querySelector(".slider-next");
+// let slideIndex = 0;
+
+// function showSlide() {
+//   const sliderContainer = document.querySelector(".slider-container");
+//   sliderContainer.style.transform = `translateX(-${
+//     slideIndex * slides[0].offsetWidth
+//   }px)`;
+// }
+
+// function showPrevSlide() {
+//   slideIndex--;
+//   if (slideIndex < 0) {
+//     slideIndex = slides.length - 1;
+//   }
+//   showSlide();
+// }
+
+// function showNextSlide() {
+//   slideIndex++;
+//   if (slideIndex >= slides.length) {
+//     slideIndex = 0;
+//   }
+//   showSlide();
+// }
