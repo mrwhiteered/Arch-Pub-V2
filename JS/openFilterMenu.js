@@ -13,9 +13,9 @@ opnMenu.addEventListener('click', function(){
     
     // проверяем если добавлен класс для активных списков, то тогда меняется иконка фильтра 
     if (MenuList.classList.contains('activMenu')) {
-        MenuLogo.src="image/filterLogoSvgBlack.svg";
+        MenuLogo.src="image/menuBlack.svg";
     } else {
-        MenuLogo.src="image/filterLogoSvg.svg";
+        MenuLogo.src="image/menuWhite.svg";
     }
     });
     //---------------------------------------------------

@@ -8,32 +8,51 @@ const imgDis = document.getElementById('diser');
 const imgStat = document.getElementById('stat');
 
 function addLine() {
-    if (!imgDis.classList.contains('under')) {
-imgDis.classList.add('under');
-imgStat.classList.remove('under');
-listStats.classList.remove('showStats');
-listDiser.classList.add('showDiser');
-    } else {
     imgDis.classList.remove('under');
-imgStat.classList.add('under');
-listStats.classList.add('showStats');
-listDiser.classList.remove('showDiser');
-    }
+     imgStat.classList.add('under');
+ listStats.classList.add('showStats');
+ listDiser.classList.remove('showDiser');
 }
 
 function addLine2() {
-    if (!imgStat.classList.contains('under')) {
-        imgStat.classList.add('under');
-imgDis.classList.remove('under');
-listStats.classList.add('showStats');
-listDiser.classList.remove('showDiser');
-    } else {
-    imgStat.classList.remove('under');
+       
+          imgStat.classList.remove('under');
     imgDis.classList.add('under');
-    listStats.classList.remove('showStats');
-    listDiser.classList.add('showDiser');
-    }
-}
+     listStats.classList.remove('showStats');
+     listDiser.classList.add('showDiser');
+       }
+
+
+
+
+// Мой вариант с переключение по любой кнопке 
+// function addLine() {
+//     if (!imgDis.classList.contains('under')) {
+// imgDis.classList.add('under');
+// imgStat.classList.remove('under');
+// listStats.classList.remove('showStats');
+// listDiser.classList.add('showDiser');
+//     } else {
+//     imgDis.classList.remove('under');
+// imgStat.classList.add('under');
+// listStats.classList.add('showStats');
+// listDiser.classList.remove('showDiser');
+//     }
+// }
+
+// function addLine2() {
+//     if (!imgStat.classList.contains('under')) {
+//         imgStat.classList.add('under');
+// imgDis.classList.remove('under');
+// listStats.classList.add('showStats');
+// listDiser.classList.remove('showDiser');
+//     } else {
+//     imgStat.classList.remove('under');
+//     imgDis.classList.add('under');
+//     listStats.classList.remove('showStats');
+//     listDiser.classList.add('showDiser');
+//     }
+// }
 
 
 // добавление статей

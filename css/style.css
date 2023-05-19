@@ -168,7 +168,8 @@ color: #000000;
 }
 
 .filter__logo {
-    
+    width: 41px;
+    height: 41px;
     margin: 5px;
     margin-right: 20px;
 }
@@ -197,9 +198,10 @@ line-height: 35px;
 .search__input {
     border: 1px solid #000000;
     border-radius: 30px;
-    padding: 20px;
+    padding:4px 31px;
     text-align: center;
-    width: 275px;
+    width: 274px;
+    height: 28px;
 
     font-family: 'Inter';
 font-style: normal;
@@ -246,7 +248,8 @@ line-height: 35px;
 }
 
 .menu__logo {
-    width: 47px;
+    width: 41px;
+    height: 41px;
     margin: 5px;
     margin-right: 0;
     
