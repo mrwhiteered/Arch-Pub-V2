@@ -111,7 +111,7 @@ select {
 }
 .logoTitle {
     
-    font-family: 'Vollkorn SC';
+    font-family: 'Book Antiqua', sans-serif;
 font-style: normal;
 color: #000000;
 font-weight: 400;
@@ -127,7 +127,7 @@ text-align: center;
     margin-bottom: 10px;
 }
 .logo_text{
-    font-family: 'Vollkorn SC';
+    font-family: 'Book Antiqua', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 7px;
@@ -184,7 +184,7 @@ color: #000000;
     text-transform: uppercase;
     display: block;
 
-    font-family: 'Vollkorn SC';
+    font-family: 'Book Antiqua', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 11px;
@@ -240,7 +240,7 @@ text-align: center;
     margin-right: 20px;
     margin-left: auto;
 
-    font-family: 'Vollkorn SC';
+    font-family: 'Book Antiqua', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 11px;
@@ -276,7 +276,7 @@ line-height: 35px;
 }
 
 .filter__item {
-    list-style-image: url('/image/list-style-img.png');
+    list-style-image: url('/image/starLi.png');
     padding:0 10px;
     z-index: 2;
     text-align: left;
@@ -287,6 +287,7 @@ font-size: 10px;
 line-height: 35px;
 
 }
+
 
 .activFilter {
     display: block;
@@ -404,6 +405,7 @@ padding: 5px;
 font-style: normal;
 font-weight: 600;
 font-size: 12px;
+font-family: 'Book Antiqua', sans-serif;
 
   }
   
@@ -417,17 +419,18 @@ font-size: 12px;
     position:-webkit-sticky; 
     position:sticky;
      bottom: 0;
- background-color: white;
+ background-color: rgb(0, 0, 0);
       
     
   }
   .btn__publication{
     margin-top: 13px;
     background: transparent;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
 border-radius: 30px;
 margin-bottom: 13px;
 z-index: 30;
+color: white;
 
 
 
@@ -469,7 +472,7 @@ width: 315px;
   }
   .menu__link{
     text-decoration: none;
-    color: #000000;
+    color: rgba(0, 0, 0, 0.65);
     text-transform: uppercase;
     font-family: 'Inter';
 font-style: normal;
@@ -515,12 +518,12 @@ line-height: 35px;
     z-index: 3;
 }
 .item__dis{
-    font-family: 'Vollkorn SC';
+    font-family: 'Book Antiqua', sans-serif;
 font-style: normal;
 font-weight: 400;
 width: 200px;
 font-size: 11px;
-line-height: 35px;
+line-height: 20px;
 /* or 318% */
 padding: 0 50px;
 
@@ -540,4 +543,14 @@ user-select: none;
 }
 .item__dis img{
     width: 100%;
+}
+.add__star::before{
+content: url('/image/starLi.png');
+display: inline-block;
+padding-right: 5px;
+vertical-align: middle;
+
+}
+.add__star{
+    color: #000000;
 }
