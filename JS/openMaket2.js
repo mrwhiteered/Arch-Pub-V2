@@ -72,10 +72,10 @@ if (id != null) {
                                 <button class="buttonPresentationDiser btnDiser">Открыть презентацию работы </button>
                           </li>
                       </ul>
-                        // слайдер НЕ РАБОАТЕТ 
+                        
                       <div class="galleryDiser">
                            <div class="slider-nav">
-                                 <button onclick="showPrevSlide()" class="slider-prev">
+                                 <button onclick="prevSlide()" class="slider-prev ">
                                     <img class="leftRow" src="image/contentImg/diserGallery/leftRow.png" />
                                  </button>  
                            </div>
@@ -85,12 +85,12 @@ if (id != null) {
                               </div>
                            </div>
                            <div class="slider-nav">
-                              <button onclick="showNextSlide()" class="slider-next">
+                              <button onclick="nextSlide()"  class="slider-next">
                                     <img class="leftRow" src="image/contentImg/diserGallery/RightRow.png" />
                               </button>
                            </div>
                         </div>
-                        // конец слайдер 
+                        
                     </div>
                 
             </div>
@@ -104,49 +104,29 @@ if (id != null) {
     // Ну и в итоге вставляем это все в контейнер
     textElement.appendChild(newItem);
 
-    var sliderContainer = document.querySelector('.slider-container');
+    let sliderContainer = document.querySelector('.slider-container');
 
 // Создаем элементы <img> на основе массива imgArray
 for (var i = 0; i < galleryArray.length; i++) {
   var galElement = document.createElement("img");
   galElement.src = galleryArray[i];
   galElement.alt = "Image " + (i+1);
-  galElement.classList.add("slideImg");
+  galElement.classList.add("slide");
   sliderContainer.appendChild(galElement);
+  
 };
+
   }
   getData();
+  
+  
 };
 
 
 
-// // слайдер НЕ РАБОТАЕТ
-// const slider = document.querySelector(".slider");
-// const sliderContainer = document.querySelector(".slider-container");
-// const slides = document.querySelectorAll("img");
-// const prevButton = document.querySelector(".slider-prev");
-// const nextButton = document.querySelector(".slider-next");
-// let slideIndex = 0;
 
-// function showSlide() {
-//   const sliderContainer = document.querySelector(".slider-container");
-//   sliderContainer.style.transform = `translateX(-${
-//     slideIndex * slides[0].offsetWidth
-//   }px)`;
-// }
 
-// function showPrevSlide() {
-//   slideIndex--;
-//   if (slideIndex < 0) {
-//     slideIndex = slides.length - 1;
-//   }
-//   showSlide();
-// }
 
-// function showNextSlide() {
-//   slideIndex++;
-//   if (slideIndex >= slides.length) {
-//     slideIndex = 0;
-//   }
-//   showSlide();
-// }
+
+
+
