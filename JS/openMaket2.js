@@ -86,7 +86,7 @@ if (id != null) {
                            </div>
                            <div class="slider-nav">
                               <button onclick="nextSlide()"  class="slider-next">
-                                    <img class="leftRow" src="image/contentImg/diserGallery/RightRow.png" />
+                                    <img class="leftRow" src="image/contentImg/diserGallery/rightRow.png" />
                               </button>
                            </div>
                         </div>
