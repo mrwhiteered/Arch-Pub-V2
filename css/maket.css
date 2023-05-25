@@ -22,12 +22,18 @@
     background: white;
     width: 200px;
 }
+.container__secondPage{
+  margin: 0 70px;
+}
 
 
 /* Diser */
 .diserContainer{
     max-width: 1270px;
     margin: 50px auto;
+}
+.openbtn{
+  background: transparent;
 }
 .diseTopPart{
 display: flex;
@@ -38,6 +44,7 @@ margin-bottom: 60px;
 .titleDiser{
     font-family: 'Vollkorn SC';
 font-style: normal;
+
 font-weight: 400;
 font-size: 28px;
 line-height: 39px;
@@ -46,6 +53,9 @@ text-transform: uppercase;
 max-width: 320px;
 color: #000000;
 padding-right: 50px;
+}
+.diserSpravka{
+  padding-left: 30px;
 }
 .diserBottomPart{
     display:flex ;

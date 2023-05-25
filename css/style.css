@@ -278,14 +278,14 @@ line-height: 35px;
     top: 0;
     display: none;
     z-index: 999;
-    background: #00000033;
+    background: #635b5b;
     z-index: 2;
    
 
 }
 
 .filter__item {
-    list-style-image: url('/image/starLi.png');
+   
     padding:0 10px;
     z-index: 2;
     text-align: left;
@@ -295,6 +295,12 @@ font-weight: 400;
 font-size: 10px;
 line-height: 35px;
 
+}
+.filter__item::before{
+    content: url('../image/starLi.png');
+    display: inline-block;
+padding-right: 5px;
+vertical-align: middle;
 }
 
 
@@ -503,6 +509,9 @@ font-weight: 400;
 font-size: 10px;
 line-height: 35px;
     
+  }
+  .menu__link:hover{
+    color: #000000;
   }
   .btn__menu{
     background: none;
