@@ -79,7 +79,13 @@ select {
 
 /* container */
 
-
+.body_hide {
+	opacity: 0;
+	transition: .9s opacity ease-in-out;
+}
+.body_visible {
+	opacity: 1;
+}
 
 .container {
     width: min(100% - 2rem, 1920px);
