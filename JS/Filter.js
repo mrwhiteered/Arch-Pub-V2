@@ -1,10 +1,12 @@
-let filterLogo = document.querySelector('.filter__logo')
+let filterLogo = document.querySelector('.filter__logo');
 let filterList = document.getElementById('filterList');
 let filterBtn = document.getElementById('filterBtn');
-let filterTitle = document.getElementById('filterTitle')
+let filterTitle = document.getElementById('filterTitle');
 let filterItem = document.querySelectorAll('.filter__item');
-let toBottom = document.getElementsByClassName('toBottom')
+let toBottom = document.getElementsByClassName('toBottom');
 
+let checkFilter = document.getElementById('menuList');
+let CheckMenuTitle = document.getElementById('menuTitle');
 // Смена цвета выбранного фильтра
 // for( let i = 0; i < filterItem.length; i++){ 
 //     filterItem[i].addEventListener('click', function(){
@@ -16,14 +18,22 @@ let toBottom = document.getElementsByClassName('toBottom')
     	
   
 
-// ----------Открытие фильтра-------------------------------------------
+// ----------Открытие фильтра-----
 // При нажатии на кнопку ,ему присваивается событие и выполняется функция 
 filterBtn.addEventListener('click', function(){
+
+    if (checkFilter.classList.contains('activMenu')){
+        checkFilter.classList.remove('activMenu');
+        CheckMenuTitle.classList.remove('enableTitle');
+        MenuLogo.src="image/menuWhite.svg";
+    }
+
 filterList.classList.toggle('activFilter'); // добавляем новый класс списку фильтров, дисплэй блок 
 filterTitle.classList.toggle('enableTitle'); // добавляем новый класс титлу, прозрачность ему бахаем
 
 // проверяем если добавлен класс для активных списков, то тогда меняется иконка фильтра 
 if (filterList.classList.contains('activFilter')) {
+   
     filterLogo.src="image/filterLogoSvgBlack.svg";
 //  for (let i= 0;toBottom.length >i; i++ ){
 //        toBottom[i].classList.add('disable-pointer-events');

@@ -307,7 +307,7 @@ vertical-align: middle;
 .activFilter {
     display: block;
     font-size: 10px;
-    width: 100%;
+   
     font-weight: 700;
 }
 .activMenu{
@@ -475,17 +475,15 @@ color: white;
   
   }
   /* menu */
+
   .memu__list{
   
 position: absolute;
-    right: 70px;
+    right: 125px;
    
     display: none;
     z-index: 1;
     background: #00000033;
-width: 315px;
-
-
 
   }
   .menu__item{
