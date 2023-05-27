@@ -13,11 +13,13 @@ let ChekfilterTitle = document.getElementById('filterTitle');
 // При нажатии на кнопку ,ему присваивается событие и выполняется функция 
 opnMenu.addEventListener('click', function(){
 
+    if(checkMenu){
     if (checkMenu.classList.contains('activFilter')){
         checkMenu.classList.remove('activFilter');
         ChekfilterTitle.classList.remove('enableTitle');
         filterLogo.src="image/filterLogoSvg.svg";
     }
+}
     MenuList.classList.toggle('activMenu'); // добавляем новый класс списку фильтров, дисплэй блок 
     MenuTitle.classList.toggle('enableTitle'); // добавляем новый класс титлу, прозрачность ему бахаем
     
