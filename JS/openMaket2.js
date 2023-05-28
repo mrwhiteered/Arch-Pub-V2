@@ -1,5 +1,6 @@
 var urlParams = new URLSearchParams(window.location.search);
 var id = urlParams.get("id");
+
 console.log(id);
 // add the ID to the text element
 var textElement = document.getElementById("myText");
@@ -18,7 +19,7 @@ if (id != null) {
     let objGalery = data[id]["galery"];
     let galleryArray = Object.values(objGalery);
 
-    console.log(galleryArray[3]);
+   //  console.log(galleryArray[3]);
 
     const newItem = document.createElement("div"); // создаем новый элемент newItem
     // меняем содержимое элмента newItem (дописываем туда все нужные теги классы и успеваем вставлять значения )
@@ -117,8 +118,8 @@ for (var i = 0; i < galleryArray.length; i++) {
 };
 
   }
-  getData();
   
+  getData();
   
 };
 
