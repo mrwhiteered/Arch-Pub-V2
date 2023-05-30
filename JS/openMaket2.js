@@ -68,9 +68,9 @@ if (id != null) {
                             </div>
                           </li>
                           <li class="diserButtons">
-                                <button class="buttonTextDiser btnDiser">Открыть текст работы </button>
-                                <button class="buttonTabletDiser btnDiser">Открыть планшет работы </button>
-                                <button class="buttonPresentationDiser btnDiser">Открыть презентацию работы </button>
+                          <a href="${idelement.pdf}" target="_blank"> <button class="buttonTextDiser btnDiser">Открыть текст работы </button></a>
+                          <a href="${idelement.tablet}" target="_blank">  <button class="buttonTabletDiser btnDiser">Открыть планшет работы </button></a>
+                          <a href="${idelement.presentaion}" target="_blank"> <button class="buttonPresentationDiser btnDiser">Открыть презентацию работы </button></a>
                           </li>
                       </ul>
                         
@@ -97,6 +97,7 @@ if (id != null) {
             </div>
                       `;
 
+                    
     // Не забываем newItem тоже добавить пару классов
     newItem.classList.add("diserContainer");
     newItem.classList.add(idelement.category);
@@ -105,17 +106,10 @@ if (id != null) {
     // Ну и в итоге вставляем это все в контейнер
     textElement.appendChild(newItem);
 
-    let sliderContainer = document.querySelector('.slider-container');
 
-// Создаем элементы <img> на основе массива imgArray
-for (var i = 0; i < galleryArray.length; i++) {
-  var galElement = document.createElement("img");
-  galElement.src = galleryArray[i];
-  galElement.alt = "Image " + (i+1);
-  galElement.classList.add("slide");
-  sliderContainer.appendChild(galElement);
-  
-};
+    
+    let galLength = galleryArray.length
+await sliderWorkPlease(galLength,galleryArray);
 
   }
   
@@ -123,9 +117,19 @@ for (var i = 0; i < galleryArray.length; i++) {
   
 };
 
-
-
-
+function sliderWorkPlease (galLength,galleryArray){
+   let sliderContainer = document.querySelector('.slider-container');
+   
+// Создаем элементы <img> на основе массива imgArray
+for (var i = 0; i < galLength; i++) {
+  var galElement = document.createElement("img");
+  galElement.src = galleryArray[i];
+  galElement.alt = "Image " + (i+1);
+  galElement.classList.add("slide");
+  sliderContainer.appendChild(galElement);
+  
+};
+}
 
 
 
