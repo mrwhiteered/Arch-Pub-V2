@@ -278,7 +278,7 @@ line-height: 35px;
     top: 0;
     display: none;
     z-index: 999;
-    background: #635b5b;
+    /* background: #635b5b; */
     z-index: 2;
    
 }
@@ -293,7 +293,14 @@ font-style: normal;
 font-weight: 400;
 font-size: 10px;
 line-height: 35px;
-
+background: #635b5b;
+color: #000000;
+}
+.choosenFilter{
+    color: white;
+}
+.filter__item:hover{
+    color: white;
 }
 .filter__item::before{
     content: url('../image/starLi.png');
@@ -301,6 +308,10 @@ line-height: 35px;
 padding-right: 5px;
 vertical-align: middle;
 }
+.choosenFilter::before{
+    content: url('../image/starLiWhite.png');
+}
+
 
 
 .activFilter {
