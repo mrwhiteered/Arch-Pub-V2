@@ -302,6 +302,9 @@ color: #000000;
 .filter__item:hover{
     color: white;
 }
+.filter__item:hover::before{
+    content: url('../image/starLiWhite.png');
+}
 .filter__item::before{
     content: url('../image/starLi.png');
     display: inline-block;
