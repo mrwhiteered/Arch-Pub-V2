@@ -96,8 +96,7 @@ if (id != null) {
                 
             </div>
                       `;
-
-                    
+               
     // Не забываем newItem тоже добавить пару классов
     newItem.classList.add("diserContainer");
     newItem.classList.add(idelement.category);
@@ -106,15 +105,10 @@ if (id != null) {
     // Ну и в итоге вставляем это все в контейнер
     textElement.appendChild(newItem);
 
-
-    
     let galLength = galleryArray.length
 await sliderWorkPlease(galLength,galleryArray);
-
   }
-  
   getData();
-  
 };
 
 function sliderWorkPlease (galLength,galleryArray){
