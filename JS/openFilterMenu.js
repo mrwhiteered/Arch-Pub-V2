@@ -33,3 +33,18 @@ opnMenu.addEventListener('click', function(){
     });
     //---------------------------------------------------
 
+
+let menuLocation =document.getElementById('menuLocation')
+    document.addEventListener('mousedown', function(event) {
+        if (MenuList.classList.contains('activMenu')) {
+      console.log('на экран ')
+      // Проверяем, был ли клик вне области фильтра
+      if (!menuLocation.contains(event.target)) {
+        // Закрываем фильтр
+        MenuList.classList.remove('activMenu');
+        MenuTitle.classList.remove('enableTitle');
+        MenuLogo.src = "image/menuWhite.svg";
+        // Отключите другие действия, которые вы хотите выполнить при закрытии фильтра
+      }
+    }
+    });
