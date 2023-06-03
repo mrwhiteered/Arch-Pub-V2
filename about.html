@@ -10,11 +10,23 @@
 </head>
 <body class="about__body">
     <header class="header__about">
-        <button class="about__burger">
-            <div class="about__burger_line"></div>
-            <div class="about__burger_line"></div>
-            <div class="about__burger_line"></div>
+        <nav class="nav__about">
+        <button onclick="burgerClick()" class="about__burger">
+            <div class="about__burger_line line__1"></div>
+            <div class="about__burger_line line__2"></div>
+            <div class="about__burger_line line__3"></div>
         </button>
+       
+            <ul class="list__about">
+                <li class="item__about">Раз</li>
+                <li class="item__about">Два</li>
+                <li class="item__about">Три</li>
+                <li class="item__about">Четыре</li>
+                <li class="item__about">Пять</li>
+
+            </ul>
+        </nav>
+       
     </header>
     <main class="main__about">
         <div class="about">
@@ -39,6 +51,6 @@
     </div>
         </div>     
     </main>
-    
+    <script src="JS/about.js"></script>
 </body>
 </html>
