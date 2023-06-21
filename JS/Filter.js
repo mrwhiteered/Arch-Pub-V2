@@ -15,16 +15,16 @@ filterBtn.addEventListener('click', function(){
     if (checkFilter.classList.contains('activMenu')){
         checkFilter.classList.remove('activMenu');
         CheckMenuTitle.classList.remove('enableTitle');
-        MenuLogo.src="image/menuWhite.svg";
+        MenuLogo.src="image/icons/menuWhite2.png";
     }
 
     FilterOn();
 
 // проверяем если добавлен класс для активных списков, то тогда меняется иконка фильтра 
 if (filterList.classList.contains('activFilter')) {
-    filterLogo.src="image/filterLogoSvgBlack.svg";
+    filterLogo.src="image/icons/FilterLogoDark2.png";
 } else {
-    filterLogo.src="image/filterLogoSvg.svg";
+    filterLogo.src="image/icons/FilterLogo2.png";
 }
 
 });
@@ -84,7 +84,7 @@ let filterLocation = document.getElementById('filterLocation');
         // Закрываем фильтр
         filterList.classList.remove('activFilter');
         filterTitle.classList.remove('enableTitle');
-        filterLogo.src = "image/filterLogoSvg.svg";
+        filterLogo.src = "image/icons/FilterLogo2.png";
         // Отключите другие действия, которые вы хотите выполнить при закрытии фильтра
       }
     }

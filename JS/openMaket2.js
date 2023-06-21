@@ -62,7 +62,7 @@ if (id != null) {
                               ${idelement.textContent}
                              </div>
                              <button onclick="DDTOpen()" id="DDTBtn" class="DDTButton">
-                             <img id="imgDDT" class="dropDown__img" src="image/contentImg/diserTitleImg/down.png"/>
+                             <img id="imgDDT" class="dropDown__img" src="image/icons/down2.png"/>
                               </button>
                              
                             </div>
