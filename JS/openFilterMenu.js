@@ -17,7 +17,7 @@ opnMenu.addEventListener('click', function(){
     if (checkMenu.classList.contains('activFilter')){
         checkMenu.classList.remove('activFilter');
         ChekfilterTitle.classList.remove('enableTitle');
-        filterLogo.src="image/filterLogoSvg.svg";
+        filterLogo.src="image/icons/FilterLogo2.png";
     }
 }
     MenuList.classList.toggle('activMenu'); // добавляем новый класс списку фильтров, дисплэй блок 
@@ -27,10 +27,8 @@ opnMenu.addEventListener('click', function(){
     if (MenuList.classList.contains('activMenu')) {
             
         MenuLogo.src="image/menuBlack.svg";
-       
     } else {
         MenuLogo.src="image/menuWhite.svg";
-      
     }
     });
     //---------------------------------------------------
@@ -46,7 +44,7 @@ let menuLocation =document.getElementById('menuLocation')
         MenuList.classList.remove('activMenu');
         MenuTitle.classList.remove('enableTitle');
         MenuLogo.src = "image/menuWhite.svg";
-        
+        // Отключите другие действия, которые вы хотите выполнить при закрытии фильтра
       }
     }
     });
