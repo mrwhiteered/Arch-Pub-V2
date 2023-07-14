@@ -1,6 +1,14 @@
-@charset "UTF-8";
 body {
   overflow-x: hidden;
+}
+
+.containerLine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
 }
 
 .header__about {
@@ -23,10 +31,10 @@ body {
   align-items: center;
   transform: translate(100%);
   transition: transform 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  transition: all 0.5s;
   padding: 20px;
-  /* Ваши текущие стили для .list__about */
-  opacity: 0; /* Устанавливаем начальную прозрачность в 0 */
-  /* Анимация плавного появления */
+  opacity: 0;
 }
 .header__about .nav__about .list__about .item__about {
   text-align: left;
@@ -34,6 +42,7 @@ body {
 }
 .header__about .nav__about .list__about_active {
   transform: translate(0%);
+  transition: all 0.5s;
   opacity: 1;
 }
 
@@ -87,6 +96,16 @@ body {
   to {
     opacity: 1;
     transform: translateX(0%);
+  }
+}
+@keyframes fadeOutFromTop {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
   }
 }
 .about {

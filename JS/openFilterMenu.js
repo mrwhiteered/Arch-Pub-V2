@@ -27,8 +27,10 @@ opnMenu.addEventListener('click', function(){
     if (MenuList.classList.contains('activMenu')) {
             
         MenuLogo.src="image/menuBlack.svg";
+       
     } else {
         MenuLogo.src="image/menuWhite.svg";
+      
     }
     });
     //---------------------------------------------------
@@ -44,7 +46,7 @@ let menuLocation =document.getElementById('menuLocation')
         MenuList.classList.remove('activMenu');
         MenuTitle.classList.remove('enableTitle');
         MenuLogo.src = "image/menuWhite.svg";
-        // Отключите другие действия, которые вы хотите выполнить при закрытии фильтра
+        
       }
     }
     });
