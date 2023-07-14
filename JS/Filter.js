@@ -24,7 +24,7 @@ filterBtn.addEventListener('click', function(){
 if (filterList.classList.contains('activFilter')) {
     filterLogo.src="image/filterLogoSvgBlack.svg";
 } else {
-    filterLogo.src="image/filterLogoSvg.svg";
+    filterLogo.src="image/stats.png";
 }
 
 });
