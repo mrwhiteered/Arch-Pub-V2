@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
               const dynamicElement = createDynamicElement(value);
               listStats.appendChild(dynamicElement);
             });
+            addClickToStats();
           }
         });
       }
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const li = document.createElement("li");
       li.classList.add("item__stats");
       li.innerHTML = `
+      
         <div class="left__stats">
           <img src="${dataObj.image}" alt="" class="stats__img">
           <h3 class="text__stats">${dataObj.text}</h3>
@@ -45,11 +47,28 @@ document.addEventListener("DOMContentLoaded", function() {
           <h4 class="name__stats">${dataObj.Avtor}</h4>
           <p class="date__stats">${dataObj.time}</p>
         </div>
+       
       `;
       return li;
     }
+
+    function addClickToStats(){
+        const FItem = document.getElementsByClassName('item__stats');
+  for (let j = 0; j < FItem.length; j++) {
+    const oneItem = FItem[j];
+    oneItem.addEventListener('click', function() {
+      window.location.href = 'stats.html?id=' + j;
+    });
+  }
+    }
+  try {
+     // Вызываем функцию добавления динамических элементов при клике на элемент с id "item__stat"
+     document.getElementById("item__stat").addEventListener("click", addDynamicElements);
+ 
+  } catch (error) {
+    console.log('мы уже перешли на другую страничку')
+  }
+   
   
-    // Вызываем функцию добавления динамических элементов при клике на элемент с id "item__stat"
-    document.getElementById("item__stat").addEventListener("click", addDynamicElements);
-  });
-  
+
+});
