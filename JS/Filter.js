@@ -22,9 +22,9 @@ filterBtn.addEventListener('click', function(){
 
 // проверяем если добавлен класс для активных списков, то тогда меняется иконка фильтра 
 if (filterList.classList.contains('activFilter')) {
-    filterLogo.src="image/filterLogoSvgBlack.svg";
+    filterLogo.src="image/icons/FilterLogoDark2.png";
 } else {
-    filterLogo.src="image/filterLogoSvg.svg";
+    filterLogo.src="image/icons/FilterLogo2.png";
 }
 
 });
