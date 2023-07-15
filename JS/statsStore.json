@@ -1,19 +1,19 @@
 {
     "data1": {
         "id": "1",
-        "image": "image/stats/logoStats/logodata1.png",
+        "image": "image/stats/logoStats/logoData1.png",
       "text": "Адаптивное многофункциональное пространство как знаковый объект городских периферийных территорий.",
       "Avtor": "Чумаченко Евгения Геннадьевна",
       "time": "март 2023"
     },
     "data2": {
-        "image": "image/stats/logoStats/logodata1.png",
+        "image": "image/stats/logoStats/logoData1.png",
       "text": "Придумывать лень пишу всеч что пришло в голову потому что могу на запятыем мне все равно блаб ла ",
       "Avtor": "Беляев Даниил Анатолич",
       "time": "7 июля 2023"
     },
     "data3": {
-        "image": "image/stats/logoStats/logodata1.png",
+        "image": "image/stats/logoStats/logoData1.png",
       "text": "Что то пишу ",
       "Avtor": "Погосян Софья Игоревна ",
       "time": "1 сентября 2005"
