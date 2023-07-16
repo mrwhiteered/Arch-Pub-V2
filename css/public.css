@@ -22,6 +22,10 @@ text-align: center;
 .item__public{
     position: relative;
 }
+.link__public{
+    text-decoration: none;
+    
+}
 .underline__public{
     position: absolute;
     top: 35px;

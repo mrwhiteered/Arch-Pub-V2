@@ -19,12 +19,50 @@ body {
 .header__about .nav__about {
   position: relative;
 }
+.link__about{
+  text-decoration: none;
+  color: #000;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.btn__publication{
+  margin-top: 13px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    margin-bottom: 13px;
+    z-index: 30;
+    color: white;
+    display: block;
+   
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px 15px;
+    
+}
+.footer__about{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.container__footer_about{
+  background: #000;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.link__form{
+  text-decoration: none;
+}
 .header__about .nav__about .list__about {
   display: flex;
   text-align: left;
   flex-direction: column;
   list-style: none;
-  background-color: skyblue;
+  background-color: #635b5b;
   position: absolute;
   right: 0;
   z-index: 2;
@@ -38,7 +76,8 @@ body {
 }
 .header__about .nav__about .list__about .item__about {
   text-align: left;
-  width: 100px;
+  width: 200px;
+  padding-bottom: 10px;
 }
 .header__about .nav__about .list__about_active {
   transform: translate(0%);
