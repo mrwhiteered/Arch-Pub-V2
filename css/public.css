@@ -1,0 +1,96 @@
+
+.list__public{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 115px 115px 155px 115px 115px;
+    gap: 85px;
+    justify-content: center;
+    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+}
+.item__title_public{
+    color: rgba(0, 0, 0, 0.65);
+text-align: right;
+font-family: Vollkorn SC;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: 35px;
+text-align: center;
+}
+.item__public{
+    position: relative;
+}
+.underline__public{
+    position: absolute;
+    top: 35px;
+    left: -5px;
+}
+.img__public{
+    margin-top: 10px;
+}
+.main__form{
+
+}
+.container__public{
+
+}
+.title__public{
+    color: #000;
+    text-align: center;
+    text-align: center;
+    font-family: Vollkorn SC;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-bottom: 75px;
+    max-width: 210px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.text__public{
+    color: #000;
+    font-family: Vollkorn SC;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 547px;
+    margin: 0  auto;
+    padding-bottom: 50px;
+}
+.bottom__text_public{
+   margin-top: 30px;
+   display: block;
+}
+.form__btn{
+    color: #FFFDFD;
+    text-align: center;
+    font-family: Vollkorn SC;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 50px;
+border: 1px solid #000;
+background: #000;
+padding: 6px 18px;
+}
+.mail__form{
+    margin: 0  auto;
+    display: block;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 50px;
+border: 1px solid #000;
+background: #FFF;
+padding: 6px 18px;
+}
