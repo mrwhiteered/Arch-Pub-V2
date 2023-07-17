@@ -98,3 +98,27 @@ border: 1px solid #000;
 background: #FFF;
 padding: 6px 18px;
 }
+.info{
+    border: 2px solid rgba(0, 0, 0, 0.151);
+    background: rgba(128, 128, 128, 0.144);
+    margin: 0  auto;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 30px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform .5s, opacity .7s;
+    
+}
+.activeInfo{
+    transform: translateY(0%);
+    opacity: 1;
+    
+    transition: transform .5s, opacity .7s;
+}
+.infoCopy{
+    color: #000;
+    display: block;
+    
+    text-align: center;
+}
