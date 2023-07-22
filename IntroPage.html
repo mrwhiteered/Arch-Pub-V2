@@ -8,24 +8,14 @@
     
 </head>
 <body class="container__body">
+  <div class="wrapVideo">
     <a class="linkTomain" href="index.html">
-   <video class="video" id='my-video' autoplay muted>
-  <source src="video/1_test.mp4" type="video/mp4">
+   <video class="video" id='my-video' autoplay loop muted>
+  <source src="video/gifLogo.mp4" type="video/mp4">
 </video>
 <div class="textLogo" >Тут могла быть ваша реклама</div>
 </a>
-<script>
-  var video = document.getElementById("my-video");
-  var text = document.querySelector(".textLogo");
-
-  video.addEventListener('ended', function() {
-    // Hide the video element
-    video.classList.add('video-wrapper');
-
-    // Show the text element
-    text.style.display = "block";
-  });
-</script>
+</div>
    
 </body>
 </html>

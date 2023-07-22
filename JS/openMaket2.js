@@ -25,6 +25,9 @@ if (id != null) {
     // меняем содержимое элмента newItem (дописываем туда все нужные теги классы и успеваем вставлять значения )
     // обратные кавычки для возможности вписывания JS кода
     // ${} - для добавления JS (внутри обращаюсь  к нужным элементам массива)
+
+
+    
     newItem.innerHTML = ` 
             <div>
                     <div class="diseTopPart">
@@ -77,7 +80,7 @@ if (id != null) {
                       <div class="galleryDiser">
                            <div class="slider-nav">
                                  <button onclick="prevSlide()" class="slider-prev ">
-                                    <img class="leftRow" src="image/contentImg/diserGallery/leftRow.png" />
+                                    <img class="leftRow leftRow1" src="image/contentImg/diserGallery/leftRow.png" />
                                  </button>  
                            </div>
                            <div class="slider">
@@ -87,7 +90,7 @@ if (id != null) {
                            </div>
                            <div class="slider-nav">
                               <button onclick="nextSlide()"  class="slider-next">
-                                    <img class="leftRow" src="image/contentImg/diserGallery/rightRow.png" />
+                                    <img class="leftRow leftRow2" src="image/contentImg/diserGallery/rightRow.png" />
                               </button>
                            </div>
                         </div>
@@ -96,7 +99,10 @@ if (id != null) {
                 
             </div>
                       `;
-               
+
+
+
+
     // Не забываем newItem тоже добавить пару классов
     newItem.classList.add("diserContainer");
     newItem.classList.add(idelement.category);
@@ -104,6 +110,26 @@ if (id != null) {
 
     // Ну и в итоге вставляем это все в контейнер
     textElement.appendChild(newItem);
+
+   //  проверка есть ли элемент презентации 
+    let trimmedStr = idelement.presentaion.trim();
+    if (trimmedStr==""){
+       document.querySelector('.buttonPresentationDiser').style.display = 'none';
+       }
+        //  проверка есть ли элемент pdf 
+   let trimmedStr2 = idelement.pdf.trim();
+    if (trimmedStr2==""){
+          document.querySelector('.buttonTextDiser').style.display = 'none';
+          }
+ //  проверка есть ли элемент планшет 
+   let trimmedStr3 = idelement.tablet.trim();
+   if (trimmedStr3==""){
+             document.querySelector('.buttonTabletDiser').style.display = 'none';
+             }
+
+
+
+
 
     let galLength = galleryArray.length
 await sliderWorkPlease(galLength,galleryArray);
@@ -124,6 +150,14 @@ for (var i = 0; i < galLength; i++) {
   
 };
 }
+
+
+  
+  
+   
+
+
+  
 
 
 

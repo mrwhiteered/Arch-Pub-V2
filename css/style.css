@@ -113,7 +113,7 @@ select {
 }
 .containerLogo__text{
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -409,7 +409,7 @@ vertical-align: middle;
     width: 200px; 
     font-size: 18px;
     font-weight: 700;
-    text-transform: uppercase;
+   
     text-align: center;
     font-family: 'Book Antiqua', sans-serif;
     display: none;
@@ -481,14 +481,25 @@ color: rgba(0, 0, 0, 0.5);
   }
   .correctTextDes{
     text-align: left;
- 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Число строк, которые должны отображаться */
+    -webkit-box-orient: vertical;
 font-style: normal;
-font-weight: 600;
-font-size: 12px;
-font-family: 'Book Antiqua', sans-serif;
+overflow: hidden;
+color: #000;
+text-overflow: ellipsis;
+
+font-family: Inter;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
 
   }
-  
+
 
 .wrap{
     /* border-bottom: 1px solid black; */
